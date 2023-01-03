@@ -23,7 +23,7 @@ class StatefulServiceTest {
         Assertions.assertThat(userAPrice).isSameAs(10000);
     }
 
-    static class TestConfig{
+    static class  TestConfig{
 
         @Bean
         public StatefulService statefulService() {
