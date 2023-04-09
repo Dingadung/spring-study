@@ -1,7 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Order;
-import jpabook.jpashop.domain.OrderSeach;
+import jpabook.jpashop.domain.OrderSearch;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
@@ -22,7 +22,7 @@ public class OrderRepository {
        return em.find(Order.class, id);
     }
 
-    public List<Order> findAll(OrderSeach orderSeach) {
+    public List<Order> findAll(OrderSearch orderSearch) {
         String jpql = "select o from Order o join o.member m";
         return em.createQuery(jpql)
 //                " where o.status =: status" +
